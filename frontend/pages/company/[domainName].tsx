@@ -14,7 +14,7 @@ export default function Home({
     name,
     domain,
     description,
-    category: { industry },
+    category,
     metrics: { raised, marketCap, employees, annualRevenue },
     location,
   } = companyFullDetails;
@@ -34,7 +34,7 @@ export default function Home({
           {domain && <p>www.{domain}</p>}
           <div>
             <h3>category</h3>
-            {industry && <div>industry: {industry}</div>}
+            {category?.industry && <div>industry: {category?.industry}</div>}
           </div>
           <div>
             <h3>metrics</h3>
